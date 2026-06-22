@@ -1,2 +1,380 @@
-# guies
-Summertime Saga guides and news updates
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Summertime Saga Mods & Updates — SummerSagaVault Resource</title>
+  <meta name="description" content="A curated resource page for Summertime Saga players — mod downloads, changelogs, and character guides tracked at SummerSagaVault." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://YOUR-PROJECT.pages.dev/" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f0f0f;
+      color: #e0e0e0;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    a { color: #f0a500; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      background: #161616;
+      border-bottom: 1px solid #2a2a2a;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    header .logo {
+      font-size: 20px;
+      font-weight: 700;
+      color: #f0a500;
+      letter-spacing: -0.3px;
+    }
+
+    header .tagline {
+      font-size: 13px;
+      color: #777;
+    }
+
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+
+    .hero {
+      margin-bottom: 3rem;
+    }
+
+    .hero h1 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.3;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero h1 span {
+      color: #f0a500;
+    }
+
+    .hero p {
+      font-size: 16px;
+      color: #aaa;
+      max-width: 620px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #1e1e1e;
+      border: 1px solid #2e2e2e;
+      color: #f0a500;
+      font-size: 12px;
+      padding: 3px 10px;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    section {
+      margin-bottom: 2.75rem;
+    }
+
+    section h2 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #2a2a2a;
+    }
+
+    section h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #e0e0e0;
+      margin: 1.25rem 0 0.4rem;
+    }
+
+    section p {
+      color: #aaa;
+      font-size: 15px;
+      margin-bottom: 0.75rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .card {
+      background: #161616;
+      border: 1px solid #2a2a2a;
+      border-radius: 8px;
+      padding: 1.25rem;
+    }
+
+    .card .icon {
+      font-size: 22px;
+      margin-bottom: 0.6rem;
+    }
+
+    .card h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #fff;
+      margin: 0 0 0.4rem;
+    }
+
+    .card p {
+      font-size: 13px;
+      color: #777;
+      margin: 0;
+    }
+
+    .cta-block {
+      background: #161616;
+      border: 1px solid #f0a500;
+      border-radius: 10px;
+      padding: 1.75rem;
+      margin-bottom: 2.75rem;
+    }
+
+    .cta-block h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.5rem;
+      border: none;
+      padding: 0;
+    }
+
+    .cta-block p {
+      font-size: 15px;
+      color: #aaa;
+      margin-bottom: 1.25rem;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: #f0a500;
+      color: #0f0f0f;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 0.65rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+
+    .cta-btn:hover { opacity: 0.88; text-decoration: none; }
+
+    .faq-item {
+      border-bottom: 1px solid #1e1e1e;
+      padding: 0.9rem 0;
+    }
+
+    .faq-item:last-child { border-bottom: none; }
+
+    .faq-item h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #e0e0e0;
+      margin: 0 0 0.4rem;
+    }
+
+    .faq-item p {
+      font-size: 14px;
+      color: #888;
+      margin: 0;
+    }
+
+    .version-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      margin-top: 0.75rem;
+    }
+
+    .version-table th {
+      text-align: left;
+      color: #777;
+      font-weight: 500;
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid #2a2a2a;
+    }
+
+    .version-table td {
+      padding: 0.6rem 0.75rem;
+      border-bottom: 1px solid #1e1e1e;
+      color: #aaa;
+    }
+
+    .version-table tr:last-child td { border-bottom: none; }
+
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .tag.latest { background: #1a3a1a; color: #5dbb5d; }
+    .tag.stable { background: #1a2a3a; color: #5aaaf0; }
+    .tag.old    { background: #2a2a2a; color: #777; }
+
+    footer {
+      border-top: 1px solid #1e1e1e;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 13px;
+      color: #555;
+    }
+
+    footer a { color: #777; }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 24px; }
+      main { padding: 1.75rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <div class="logo">SummerSagaVault</div>
+    <div class="tagline">Mods · Changelogs · Guides</div>
+  </div>
+</header>
+
+<main>
+
+  <div class="hero">
+    <div class="badge">Fan Resource</div>
+    <h1>Everything Summertime Saga —<br><span>Mods, Updates & Guides</span></h1>
+    <p>A curated index of resources for Summertime Saga players. Mod downloads, version history, character walkthroughs — all in one place.</p>
+  </div>
+
+  <section>
+    <h2>What is Summertime Saga?</h2>
+    <p>Summertime Saga is a free-to-play visual novel developed by DarkCookie under Kompas Productions. Available on PC (Windows, Mac, Linux) and Android, the game follows a young protagonist navigating a sprawling small-town story with branching character routes, mini-games, and a continuously expanding main storyline.</p>
+    <p>Development has been ongoing for several years with regular version releases. The game has built a large modding community, producing translation packs, UI mods, and content expansions alongside the official builds.</p>
+  </section>
+
+  <section>
+    <h2>What the community tracks</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">📦</div>
+        <h3>Mod Downloads</h3>
+        <p>Translation packs, UI tweaks, and fan-made content expansions verified before listing.</p>
+      </div>
+      <div class="card">
+        <div class="icon">📋</div>
+        <h3>Version Changelogs</h3>
+        <p>Full release history from early builds to current — what changed, what was fixed, what was added.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🗺️</div>
+        <h3>Character Guides</h3>
+        <p>Route walkthroughs for every major character, updated per version.</p>
+      </div>
+      <div class="card">
+        <div class="icon">📍</div>
+        <h3>Location Guides</h3>
+        <p>In-game location maps and event trigger references so nothing gets missed.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Recent version history</h2>
+    <table class="version-table">
+      <thead>
+        <tr>
+          <th>Version</th>
+          <th>Status</th>
+          <th>Key additions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>v0.21</td>
+          <td><span class="tag latest">Latest</span></td>
+          <td>New story content, bug fixes, performance improvements</td>
+        </tr>
+        <tr>
+          <td>v0.20.17</td>
+          <td><span class="tag stable">Stable</span></td>
+          <td>Hotfix build, compatibility updates</td>
+        </tr>
+        <tr>
+          <td>v0.20.16</td>
+          <td><span class="tag old">Archived</span></td>
+          <td>Character route expansions, new locations</td>
+        </tr>
+        <tr>
+          <td>v0.20.15</td>
+          <td><span class="tag old">Archived</span></td>
+          <td>UI overhaul, save system updates</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <div class="cta-block">
+    <h2>Full mod library and changelogs</h2>
+    <p>SummerSagaVault maintains the most up-to-date index of mods, full version changelogs, and character guides for Summertime Saga. Everything is verified and updated with each new release.</p>
+    <a href="https://summersagavault.com" class="cta-btn">Visit SummerSagaVault →</a>
+  </div>
+
+  <section>
+    <h2>Frequently asked questions</h2>
+
+    <div class="faq-item">
+      <h3>Is Summertime Saga free to download?</h3>
+      <p>Yes. The base game is completely free on PC and Android. DarkCookie is supported through Patreon, which also gives early access to new builds before public release.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Is there an iOS version?</h3>
+      <p>No. Summertime Saga is not available on iOS due to App Store content policies. Android and PC (Windows, Mac, Linux) are the only official platforms.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Are mods safe to install?</h3>
+      <p>Mods from trusted community sources are generally safe. Always download from known repositories and avoid executables — legitimate mods are typically .rpy or .rpyc files that drop into the game directory.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How often does the game update?</h3>
+      <p>DarkCookie releases updates periodically — not on a fixed schedule. Patreon supporters get early builds; public releases follow a few weeks later. Changelog tracking is the best way to stay current.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Where can I find walkthroughs?</h3>
+      <p>Character-specific walkthroughs and location guides are maintained at <a href="https://summersagavault.com">SummerSagaVault</a>, organized by version so older routes still make sense.</p>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <p>Independent fan resource. Not affiliated with DarkCookie or Kompas Productions.</p>
+  <p style="margin-top: 0.4rem;"><a href="https://summersagavault.com">summersagavault.com</a></p>
+</footer>
+
+</body>
+</html>
